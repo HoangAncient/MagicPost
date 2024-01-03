@@ -33,6 +33,9 @@ import ExchangeTable from "./pages/admin/exchangeTable/ExchangeTable";
 import Auth from "./pages/shared/Auth";
 import Authorization from "./pages/shared/Authorization";
 import Profiler from "./pages/admin/profile/Single"
+import { disableReactDevTools } from "@fvilers/disable-react-devtools";
+
+disableReactDevTools()
 const router = createBrowserRouter([
   {
     path: "/",
