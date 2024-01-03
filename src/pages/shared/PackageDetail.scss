@@ -1,0 +1,117 @@
+@import "../../assets/scss/config";
+.packageDetail {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 100%;
+  .main {
+    margin-top: 50px;
+    width: 80%;
+    min-width: 600px;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 40px;
+    .part {
+      display: flex;
+      flex-direction: column;
+      p {
+        font-size: 1rem;
+        font-family: "Segoe UI Semibold";
+      }
+      .header {
+        background-color: $gray;
+        padding: 6px 12px;
+        font-weight: 600;
+      }
+      .bodyTable {
+        padding: 6px 12px;
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+
+  .packageStatus {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+
+    .route {
+      width: 500px;
+      display: flex;
+      flex-direction: row;
+      .route1,
+      .route2,
+      .route3,
+      .route4 {
+        width: 125px;
+        height: 4px;
+        background: gray;
+      }
+    }
+    .dotContainer {
+      width: 500px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      .dot {
+        display: flex;
+        // position: absolute;
+        width: 12px;
+        height: 12px;
+        margin-top: -7px;
+        background-color: red;
+        border-radius: 50%;
+        .info {
+          margin-top: 6px;
+          margin-left: -100%;
+          display: inline-block;
+          font-size: 0.9rem;
+          width: 100px;
+          font-family: $text-font;
+        }
+      }
+    }
+  }
+}
+
+.noId {
+  min-width: 100%;
+  min-height: calc(100vh - 80px);
+  background-color: $gray;
+  text-align: center;
+  .title {
+    color: $text-hover;
+    font-size: 2rem;
+    font-weight: 600;
+    transform: translateY(48vh);
+  }
+  .desc {
+    transform: translateY(48vh);
+  }
+}
+
+.instruction {
+  margin-top: 80px;
+  text-align: center;
+  color: $text-hover;
+
+  button {
+    margin-top: 10px;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    background-color: $text-hover;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .packageDetail {
+    max-width: 100%;
+    .main {
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import "../../assets/scss/config";
+
+.packageSearch {
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 6px;
+    line-height: 80px;
+    justify-content: space-between;
+    width: 100%;
+    padding: 6px 12px;
+    input {
+        display: flex;
+        font-size: 13px;
+        align-items: center;
+        text-align: start;
+        border: none;
+        background-color: transparent;
+        outline: none;
+    }
+    .searchBtn {
+        display: flex;
+        align-items: center;
+        background: transparent;
+        border: none;
+        text-align: center;
+        flex-direction: row;
+        &:hover {
+            cursor: pointer;;
+        }
+    }
+}

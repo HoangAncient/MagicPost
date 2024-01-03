@@ -1,0 +1,138 @@
+@import "../../assets/scss/config";
+
+.navbar {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background-color: $bg-white;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  .toggle-button {
+    position: absolute;
+    top: 20px;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    .bar {
+      height: 3px;
+      width: 100%;
+      background-color: black;
+      border-radius: 10px;
+    }
+  }
+
+  .navbar-menu {
+    display: flex;
+    list-style-type: none;
+    margin-right: 20px;
+    align-items: center;
+    min-height: 100%;
+    ul {
+      display: flex;
+      margin: 0;
+      padding: 0;
+      .nav-item {
+        display: flex;
+        list-style: none;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+
+        a {
+          display: flex;
+          text-decoration: none;
+          color: #323030;
+          font-size: 13px;
+          padding: 1rem;
+          text-align: center;
+          &:hover {
+            background-color: $text-hover;
+            border-radius: 10px;
+          }
+          
+        }
+        .searchContainer {
+          height: 100%;
+          width: 220px;
+          display: flex;
+          align-items: center;
+        }
+
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    .toggle-button {
+      display: flex;
+    }
+
+    .navbar-menu {
+      display: none;
+      width: 100%;
+      background-color: $gray;
+      padding-bottom: 15px;
+      ul {
+        width: 100%;
+        flex-direction: column;
+        .nav-item {
+          text-align: center;
+          margin-top: 8px;
+          a {
+            padding: 0.5rem 1rem;
+          }
+        }
+      }
+      &.active {
+        display: flex;
+      }
+    }
+  }
+}
+
+@keyframes App-logo-move {
+  0% {
+    transform: translate(0 0) rotate(0deg);
+  }
+  10% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(-2deg);
+  }
+  40% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  60% {
+    transform: rotate(-2deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(1deg);
+  }
+  90% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: translate(calc(100%)) rotate(0deg);
+  }
+}

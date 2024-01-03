@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+$color-dark: #280E02;
+$text-hover: #f26522;
+$bg-white: white;
+$gray: #F3F6F9;
+$text: #F99E25;
+$text-font: "Segoe UI";
+$text-bold-font: "Segoe UI Semibold";
+
+
+$S: 600px;
+$M: 900px;
+$L: 1200px;
+
+// media queries
+
+@mixin Responsive($canvas) {
+  @if $canvas == S {
+    @media only screen and (max-width: $S) {
+      @content;
+    }
+  } @else if $canvas == SM {
+    @media only screen and (min-width: $S) {
+      @content;
+    }
+  } @else if $canvas == M {
+    @media only screen and (min-width: $M) {
+      @content;
+    }
+  } @else if $canvas == L {
+    @media only screen and (min-width: $L) {
+      @content;
+    }
+  }
+}
+
+
+body {
+  font-family: system-ui;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}

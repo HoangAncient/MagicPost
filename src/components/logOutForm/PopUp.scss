@@ -1,0 +1,60 @@
+@import "../../assets/scss/config";
+#myModal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100vw;
+  height: 180%;
+  overflow: auto;
+  display: flex;
+  justify-content: center;
+  
+  background: rgb(0, 0, 0, 0.4);
+  .modal-content {
+    margin-top: 200px;
+    background-color: rgb(242, 242, 242);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 400px;
+    height: 150px;
+    padding: 20px;
+    z-index: 10;
+    .abtn {
+      margin-top: 10px;
+      display: inline-block;
+      padding: 6px 12px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+    .modalHeader {
+      font-size: 1.3rem;
+      font-weight: 600;
+    }
+    .modalText {
+      margin-top: -20px;
+      font-size: 1rem;
+    }
+    .close {
+      font-size: 36px;
+      font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    
+
+    .cancel {
+      background-color: $text-hover;
+      color: white;
+    }
+    .logoutConfirm {
+      background-color: #36A2EB;
+      color: white;
+      float: right;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@import "../../assets/scss/config";
+.smtable {
+    border: 2px solid black;
+    width: 100%;
+    .row {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 2fr;
+        border: 1px solid black;
+        
+    }
+    .header {
+        border-right: 2px solid black;
+        width: calc(100%);
+        background: $gray;
+    }
+    .col {
+        border-right: 2px solid black;
+        text-align: center;
+    }
+    .body {
+        border-bottom: 2px solid black;
+    }
+}

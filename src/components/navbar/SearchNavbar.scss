@@ -1,0 +1,190 @@
+@import "../../assets/scss/config";
+
+.searchNavbar {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background-color: $bg-white;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  .toggle-button {
+    position: absolute;
+    top: 20px;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 30px;
+    height: 20px;
+    .bar {
+      height: 3px;
+      width: 100%;
+      background-color: black;
+      border-radius: 10px;
+    }
+  }
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo-image {
+    display: flex;
+    height: 60px;
+    line-height: 80px;
+  }
+  .navbarMenu {
+    display: flex;
+    list-style-type: none;
+    gap: 30px;
+    margin-right: 20px;
+    align-items: center;
+
+    .nav-item {
+      a {
+        text-decoration: none;
+        color: #323030;
+        font-size: 13px;
+        align-items: center;
+      }
+      .searchContainer {
+        width: 350px;
+        .packageSearch {
+          background-color: $gray;
+          border-radius: 6px;
+          border: none;
+          padding: 0 12px;
+
+          input {
+            width: 90%;
+            text-align: start;
+            border: none;
+            background-color: transparent;
+            outline: none;
+          }
+
+          .searchBtnView {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            transform: translateX(150%);
+            padding: 10px 25px;
+            border-radius: 6px;
+            border: none;
+            background-color: $text-hover;
+            color: white;
+            gap: 6px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+
+    &.show {
+      display: block;
+      z-index: 10;
+      background-color: rgb(96, 96, 96, 0.5);
+      position: absolute;
+      top: 65px;
+      width: 100%;
+      left: 0;
+    }
+    &.hidden {
+      display: none;
+    }
+  }
+
+  .menubar {
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+    @include Responsive(S) {
+      display: flex;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .searchNavbar {
+    display: flex;
+    flex-direction: column;
+    .toggle-button {
+      display: flex;
+    }
+
+    .navbarMenu {
+      display: none;
+      width: 100%;
+      background-color: $gray;
+      padding-bottom: 15px;
+      width: 100%;
+      list-style-type: none;
+      flex-direction: column;
+      .nav-item {
+        text-align: center;
+        margin-top: 8px;
+        a {
+          padding: 0.5rem 1rem;
+        }
+      }
+
+      &.active {
+        display: flex;
+        .nav-item {
+          .searchContainer {
+            .packageSearch {
+              max-width: 100%;
+              flex-direction: column;
+              .searchBtnView {
+                display: flex;
+                margin-right: 20px;
+                margin-top: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes App-logo-move {
+  0% {
+    transform: translate(0 0) rotate(0deg);
+  }
+  10% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(-2deg);
+  }
+  40% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+  60% {
+    transform: rotate(-2deg);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(1deg);
+  }
+  90% {
+    transform: rotate(-2deg);
+  }
+  100% {
+    transform: translate(calc(100%)) rotate(0deg);
+  }
+}

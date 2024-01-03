@@ -1,0 +1,107 @@
+@import "../../../assets/scss/config";
+.Home {
+  display: flex;
+
+  .homeContainer {
+    flex: 5px;
+    max-width: 100%;
+    @media screen and (min-width:1200px) {
+      margin-left: 271px;
+    }
+    .blurPart {
+      display: none;
+      background-color: rgb(0,0,0,0.4);
+      z-index: 300;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      @media screen and (max-width: 1200px) {
+        &.active {
+          display: block;
+        }
+      }
+    }
+    .widgets,
+    .charts {
+      display: flex;
+      padding: 20px;
+      gap: 20px;
+      max-width: 100%;
+      resize: both;
+    }
+
+    .widgets {
+      
+      @include Responsive(S) {
+        flex-direction: column;
+      }
+      @include Responsive(SM) {
+        flex-direction: column;
+      }
+      @include Responsive(M) {
+        flex-direction: row;
+      }
+      @include Responsive(L) {
+        flex-direction: row;
+      }
+    }
+    .charts {
+      padding: 5px 20px;
+      @include Responsive(S) {
+        flex-direction: column;
+        .pie {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      @include Responsive(SM) {
+        flex-direction: column;
+        .pie {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      @include Responsive(M){
+        flex-direction: row;
+        .pie {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    
+
+      .map {
+        display: flex;
+        flex: 1;
+      }
+      // @include Responsive(S) {
+      //   flex-direction: column;
+      // }
+      // @include Responsive(SM){
+      //   flex-direction: column;
+      // }
+      // @include Responsive(M) {
+      //   flex-direction: row;
+      // }
+      // @include Responsive(L) {
+      //   flex-direction: row;
+      // }
+    }
+
+    .listContainer {
+      display: flex;
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      padding: 20px;
+      flex: 6;
+      flex-direction: column;
+      .listTitle {
+        font-weight: 500;
+        color: $text;
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
